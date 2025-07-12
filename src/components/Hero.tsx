@@ -9,7 +9,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.pexels.com/photos/7533328/pexels-photo-7533328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="/banner.png"
           alt="Control de plagas profesional"
           fill
           className="object-cover"
