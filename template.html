@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es-DO">
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet" />
+  <title>FUMIPLAG - Expertos en Control de Plagas</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
+      --primary-color: #ffbd00; /* Amarillo Fumiplag */
+      --secondary-color: #f8f9fa; /* Un gris muy claro para fondos sutiles */
+      --text-primary: #1a1a1a; /* Negro intenso para textos */
+      --text-secondary: #6c757d; /* Gris para textos secundarios */
+      --dark-bg: #1a1a1a; /* Fondo negro */
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .bg-primary {
+      background-color: var(--primary-color);
+    }
+    .text-primary {
+      color: var(--primary-color);
+    }
+    .bg-secondary {
+      background-color: var(--secondary-color);
+    }
+    .text-color-primary {
+      color: var(--text-primary);
+    }
+    .text-color-secondary {
+      color: var(--text-secondary);
+    }
+    .bg-dark {
+      background-color: var(--dark-bg);
+    }
+    .border-primary {
+        border-color: var(--primary-color);
+    }
+    .focus\:ring-primary:focus {
+        --tw-ring-color: var(--primary-color);
+    }
+    .focus\:border-primary:focus {
+        --tw-border-opacity: 1;
+        border-color: var(--primary-color);
+    }
+  </style>
+</head>
+<body class="bg-white" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+      <div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 sm:px-6 lg:px-8 py-3">
+        <div class="flex items-center gap-2 text-color-primary">
+          <!-- Logo de Fumiplag -->
+          <img src="http://googleusercontent.com/file_content/2" alt="Logo de Fumiplag" class="h-12 md:h-14"/>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+            <nav class="flex items-center gap-6">
+              <a class="text-color-primary text-base font-medium leading-normal hover:text-primary transition-colors" href="#">Inicio</a>
+              <a class="text-color-primary text-base font-medium leading-normal hover:text-primary transition-colors" href="#services">Servicios</a>
+              <a class="text-color-primary text-base font-medium leading-normal hover:text-primary transition-colors" href="#about">Nosotros</a>
+              <a class="text-color-primary text-base font-medium leading-normal hover:text-primary transition-colors" href="#contact">Contacto</a>
+            </nav>
+            <div class="h-6 w-px bg-gray-200"></div>
+            <div class="flex items-center gap-4">
+                <a class="text-gray-500 hover:text-primary transition-colors" href="https://www.instagram.com/fumiplagrd" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <a href="#contact" class="hidden lg:flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-primary text-black text-base font-bold leading-normal tracking-wide shadow-lg hover:opacity-90 transition-all">
+          <span class="truncate">Cotizar</span>
+        </a>
+        <button class="lg:hidden text-color-primary">
+          <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <line x1="3" x2="21" y1="12" y2="12"></line>
+            <line x1="3" x2="21" y1="6" y2="6"></line>
+            <line x1="3" x2="21" y1="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main class="flex-grow">
+      <section class="relative flex flex-col items-center justify-center min-h-[calc(100vh-80px)] bg-cover bg-center bg-no-repeat px-4 py-20 text-white" style='background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%), url("https://images.pexels.com/photos/7533328/pexels-photo-7533328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");'>
+        <div class="max-w-3xl text-center">
+          <h1 class="text-4xl font-black leading-tight tracking-tighter md:text-6xl uppercase">Expertos en Control de Plagas</h1>
+          <p class="mt-4 text-lg font-normal md:text-xl max-w-2xl mx-auto">Soluciones innovadoras para el manejo integrado de plagas urbanas. Protegemos su hogar, negocio e industria con más de 15 años de experiencia.</p>
+          <a href="#contact" class="mt-8 flex min-w-[200px] mx-auto max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-14 px-8 bg-primary text-black text-lg font-bold leading-normal tracking-wide shadow-lg hover:opacity-90 transition-all">
+            <span class="truncate">Contáctanos Ahora</span>
+          </a>
+        </div>
+      </section>
+      <section class="py-20 bg-white" id="services">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold leading-tight tracking-tighter text-center text-color-primary mb-12 uppercase">Nuestros Servicios</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="group flex flex-col overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2">
+              <div class="relative h-56 w-full">
+                <img src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Servicios Corporativos y Empresariales" class="absolute h-full w-full object-cover" />
+              </div>
+              <div class="p-6 flex-grow">
+                <h3 class="text-xl font-bold text-color-primary mb-2">Corporativo</h3>
+                <p class="text-base text-color-secondary">Protegemos la reputación y operatividad de su empresa, restaurante o centro de salud.</p>
+              </div>
+            </div>
+            <div class="group flex flex-col overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2">
+              <div class="relative h-56 w-full">
+                <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Servicios Residenciales" class="absolute h-full w-full object-cover" />
+              </div>
+              <div class="p-6 flex-grow">
+                <h3 class="text-xl font-bold text-color-primary mb-2">Residencial</h3>
+                <p class="text-base text-color-secondary">Mantenemos su hogar, apartamento o condominio seguro y libre de plagas.</p>
+              </div>
+            </div>
+            <div class="group flex flex-col overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2">
+              <div class="relative h-56 w-full">
+                <img src="https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Servicios Industriales" class="absolute h-full w-full object-cover" />
+              </div>
+              <div class="p-6 flex-grow">
+                <h3 class="text-xl font-bold text-color-primary mb-2">Industrial</h3>
+                <p class="text-base text-color-secondary">Soluciones a gran escala para zonas francas, sector hotelero y alimenticio.</p>
+              </div>
+            </div>
+          </div>
+           <div class="mt-12 bg-secondary p-8 rounded-lg">
+                <h3 class="text-2xl font-bold text-center text-color-primary mb-6 uppercase">Catálogo de Servicios</h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-color-secondary list-disc list-inside">
+                    <li>Control de Insectos Rastreros y Voladores</li>
+                    <li>Control de Roedores</li>
+                    <li>Tratamientos Especializados en Almacenes de Alimento</li>
+                    <li>Tratamientos Preventivos y Correctivos contra Termitas</li>
+                    <li>Control de Palomas</li>
+                    <li>Desinfección Ambiental</li>
+                    <li>Programas especializados para Hospitales y Hotelería</li>
+                    <li>Control de Vectores en el Sector Salud</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+       <section class="py-20 bg-dark text-white" id="about">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold leading-tight tracking-tighter mb-4 uppercase">Sobre <span class="text-primary">Nosotros</span></h2>
+                    <p class="text-gray-300 mb-6">Somos una empresa de gestión medio ambiental a través del control y manejo de plagas. Contamos con más de 15 años de experiencia ofreciendo soluciones innovadoras a nuestros clientes.</p>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-primary mb-2">Misión</h3>
+                            <p class="text-gray-400">Brindar soluciones innovadoras de primera calidad en control y erradicación de plagas, garantizando la eficiencia y resultados de nuestros servicios.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary mb-2">Visión</h3>
+                            <p class="text-gray-400">Ser la empresa número 1 en el control de plagas en República Dominicana y el Caribe en el sector empresarial, industrial y residencial.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/7794433/pexels-photo-7794433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Equipo de Fumiplag" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+             <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center text-primary mb-6 uppercase">Nuestros Valores</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+                    <div class="flex flex-col items-center"><p>Compromiso</p></div>
+                    <div class="flex flex-col items-center"><p>Innovación</p></div>
+                    <div class="flex flex-col items-center"><p>Respeto</p></div>
+                    <div class="flex flex-col items-center"><p>Honestidad</p></div>
+                    <div class="flex flex-col items-center"><p>Puntualidad</p></div>
+                    <div class="flex flex-col items-center"><p>Trabajo en Equipo</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold leading-tight tracking-tighter text-center text-color-primary mb-12 uppercase">Nuestros Clientes</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center grayscale opacity-60">
+                <div class="flex justify-center"><img src="https://www.unapec.edu.do/wp-content/uploads/2022/10/logo-unapec-azul-300x112.png" alt="UNAPEC" class="h-12"></div>
+                <div class="flex justify-center"><img src="https://www.banreservas.com/_catalogs/masterpage/reservas/img/logo-banreservas.png" alt="Banreservas" class="h-10"></div>
+                <div class="flex justify-center"><img src="https://www.caribbeancinemas.com/globalassets/caribbean_cinemas_logo_blue.png" alt="Caribbean Cinemas" class="h-16"></div>
+                <div class="flex justify-center"><img src="https://www.sb.gob.do/assets/img/logo-main.svg" alt="Superintendencia de Bancos" class="h-16"></div>
+                <div class="flex justify-center"><img src="https://www.alorica.com/wp-content/uploads/2021/03/Alorica-logo-purple.svg" alt="Alorica" class="h-10"></div>
+                <div class="flex justify-center"><img src="https://www.mescyt.gob.do/images/logo-footer.png" alt="MESCYT" class="h-16"></div>
+            </div>
+        </div>
+    </section>
+      <section class="py-20 bg-secondary" id="contact">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold leading-tight tracking-tighter text-center text-color-primary mb-12 uppercase">Contáctenos</h2>
+            <form class="space-y-6">
+              <div>
+                <label class="block text-base font-medium text-color-primary pb-2" for="name">Nombre</label>
+                <input class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-14 p-4 bg-white" id="name" name="name" placeholder="Su Nombre" type="text" />
+              </div>
+              <div>
+                <label class="block text-base font-medium text-color-primary pb-2" for="email">Correo Electrónico</label>
+                <input class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-14 p-4 bg-white" id="email" name="email" placeholder="Su Correo Electrónico" type="email" />
+              </div>
+              <div>
+                <label class="block text-base font-medium text-color-primary pb-2" for="phone">Teléfono</label>
+                <input class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-14 p-4 bg-white" id="phone" name="phone" placeholder="Su Teléfono" type="tel" />
+              </div>
+              <div>
+                <label class="block text-base font-medium text-color-primary pb-2" for="message">Mensaje</label>
+                <textarea class="form-textarea block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary p-4 bg-white" id="message" name="message" placeholder="Su Mensaje" rows="4"></textarea>
+              </div>
+              <div class="text-center">
+                <button class="flex min-w-[150px] mx-auto max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-primary text-black text-base font-bold leading-normal tracking-wide shadow-lg hover:opacity-90 transition-all" type="submit">
+                  <span class="truncate">Enviar</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark text-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+          <div class="flex flex-col items-center md:items-start">
+             <img src="http://googleusercontent.com/file_content/2" alt="Logo de Fumiplag en pie de página" class="h-16 mb-4"/>
+            <p class="text-base text-gray-400">Expertos en control de plagas con más de 15 años de experiencia.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4 text-primary uppercase">Enlaces Rápidos</h3>
+            <nav class="flex flex-col gap-3">
+              <a class="text-base text-gray-300 hover:text-primary transition-colors" href="#">Inicio</a>
+              <a class="text-base text-gray-300 hover:text-primary transition-colors" href="#services">Servicios</a>
+              <a class="text-base text-gray-300 hover:text-primary transition-colors" href="#about">Nosotros</a>
+              <a class="text-base text-gray-300 hover:text-primary transition-colors" href="#contact">Contacto</a>
+            </nav>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4 text-primary uppercase">Contacto</h3>
+            <div class="flex flex-col gap-3 text-base text-gray-300">
+              <p>Dirección: C/ Miguel Ángel Monclús No. 460, Mirador Norte, Sto. Dgo.</p>
+              <p>Oficina: 809-363-4087</p>
+              <p>WhatsApp: 829-294-0311 / 809-876-1370</p>
+              <p>Email: contacto@fumiplagrd.do</p>
+            </div>
+            <div class="flex gap-4 mt-6 justify-center md:justify-start">
+              <a class="text-gray-300 hover:text-primary transition-colors" href="https://www.instagram.com/fumiplagrd" target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+          <p class="text-base">© 2025 FUMIPLAG. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <a href="https://wa.me/18292940311?text=Hola,%20necesito%20información%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-transform hover:scale-110" aria-label="Contactar por WhatsApp">
+    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.457l-6.354 1.654zm6.831-6.976c.36-.166 2.108-1.04 2.431-1.164.325-.125.55-.166.776.166.225.333.863 1.04 1.06 1.245.196.205.393.228.722.083.33-.145 1.395-.515 2.658-1.638-1.976-1.283-2.066-1.405-2.245-1.666-.178-.26-.054-.393.083-.518.125-.116.27-.291.404-.448.135-.156.178-.26.27-.448.092-.186.045-.345-.045-.493-.09-.148-.722-1.745-.983-2.393-.26-.648-.52-.547-.722-.56-.196-.013-.42-.013-.647-.013-.228 0-.588.083-.893.448-.304.365-1.163 1.14-1.163 2.77.0 1.63.983 3.21 1.12 3.448.14.238 1.975 3.178 4.78 4.22.65.263 1.163.425 1.564.547.64.196 1.213.166 1.658.1.482-.073 1.425-.583 1.623-1.14.197-.557.197-1.04.14-1.164-.053-.125-.196-.197-.42-.333z"></path>
+    </svg>
+  </a>
+</body>
+</html>

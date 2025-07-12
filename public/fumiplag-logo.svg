@@ -1,0 +1,20 @@
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo amarillo con bordes redondeados -->
+  <rect width="240" height="60" fill="#ffbd00" rx="8"/>
+  
+  <!-- Icono cuadrado con F -->
+  <g transform="translate(12, 12)">
+    <rect width="36" height="36" fill="#000000" rx="4"/>
+    <text x="18" y="28" font-family="Arial Black, sans-serif" font-size="24" font-weight="900" text-anchor="middle" fill="#ffbd00">F</text>
+  </g>
+  
+  <!-- Texto FUMIPLAG -->
+  <text x="60" y="28" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="#000000" letter-spacing="1px">FUMIPLAG</text>
+  
+  <!-- Texto PEST CONTROL -->
+  <text x="60" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#000000" letter-spacing="2px">PEST CONTROL</text>
+  
+  <!-- Marca registrada -->
+  <circle cx="220" cy="20" r="8" fill="none" stroke="#000000" stroke-width="1.5"/>
+  <text x="220" y="24" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#000000">®</text>
+</svg>

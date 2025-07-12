@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #ffbd00; /* Amarillo Fumiplag */
+  --secondary-color: #f8f9fa; /* Un gris muy claro para fondos sutiles */
+  --text-primary: #1a1a1a; /* Negro intenso para textos */
+  --text-secondary: #6c757d; /* Gris para textos secundarios */
+  --dark-bg: #1a1a1a; /* Fondo negro */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.text-color-primary {
+  color: var(--text-primary);
+}
+
+.text-color-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-dark {
+  background-color: var(--dark-bg);
+}
+
+.border-primary {
+    border-color: var(--primary-color);
+}
+
+.focus\:ring-primary:focus {
+    --tw-ring-color: var(--primary-color);
+}
+
+.focus\:border-primary:focus {
+    --tw-border-opacity: 1;
+    border-color: var(--primary-color);
+}
