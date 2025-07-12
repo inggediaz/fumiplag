@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col items-center justify-center min-h-[calc(100vh-80px)] bg-cover bg-center bg-no-repeat px-4 py-20 text-white"
+      className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat px-4 pt-20 pb-20 text-white"
     >
       <div className="absolute inset-0 z-0">
         <Image

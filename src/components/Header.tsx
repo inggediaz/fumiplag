@@ -2,13 +2,38 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isAtFooter, setIsAtFooter] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+      
+      setIsScrolled(scrollPosition > 50)
+      
+      // Detectar si estamos cerca del footer (últimos 200px)
+      const distanceFromBottom = documentHeight - (scrollPosition + windowHeight)
+      setIsAtFooter(distanceFromBottom < 200)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
+      isAtFooter 
+        ? 'transform -translate-y-full opacity-0' 
+        : isScrolled 
+          ? 'bg-white/70 backdrop-blur-md shadow-md transform translate-y-0 opacity-100' 
+          : 'bg-white/95 backdrop-blur-lg shadow-lg transform translate-y-0 opacity-100'
+    }`}>
       <div className="container mx-auto flex items-center justify-between whitespace-nowrap px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center">
           <Image
@@ -73,7 +98,11 @@ export default function Header() {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t shadow-lg">
+        <div className={`md:hidden border-t shadow-lg transition-all duration-300 ease-in-out ${
+          isScrolled 
+            ? 'bg-white/70 backdrop-blur-md' 
+            : 'bg-white/95 backdrop-blur-lg'
+        }`}>
           <nav className="flex flex-col p-4 space-y-4">
             <Link className="text-color-primary text-base font-medium hover:text-primary transition-colors" href="#hero" onClick={() => setIsMenuOpen(false)}>
               Inicio

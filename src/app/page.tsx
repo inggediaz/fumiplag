@@ -6,6 +6,7 @@ import Clients from '@/components/Clients'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import ScrollToTopButton from '@/components/ScrollToTopButton'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <ScrollToTopButton />
     </div>
   )
 }
