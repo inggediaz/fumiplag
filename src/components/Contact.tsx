@@ -66,19 +66,17 @@ export default function Contact() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-      // Continuar con el envío del formulario
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    
+    try {
       // Ejecutar reCAPTCHA v3
       if (!(window as any).grecaptcha) {
         throw new Error('reCAPTCHA no está cargado');
       }
       
       const token = await (window as any).grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit_contact'});
-      setRecaptchaToken(token);
-    
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-    
-    try {
+      
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -86,7 +84,7 @@ export default function Contact() {
         },
         body: JSON.stringify({
           ...formData,
-          recaptchaToken
+          recaptchaToken: token
         }),
       });
       
@@ -101,8 +99,7 @@ export default function Contact() {
           message: ''
         });
         
-        // Resetear token
-        setRecaptchaToken(null);
+        // No es necesario resetear el token ya que ahora usamos directamente el valor
         
         // Cerrar mensaje de éxito después de un breve delay
         setTimeout(() => {

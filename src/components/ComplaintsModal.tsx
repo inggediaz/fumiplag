@@ -83,7 +83,6 @@ export default function ComplaintsModal({ isOpen, onClose }: ComplaintsModalProp
       }
       
       const token = await (window as any).grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit_complaint'})
-      setRecaptchaToken(token)
       
       // Continuar con el envío del formulario
       const response = await fetch('/api/complaints', {
@@ -93,7 +92,7 @@ export default function ComplaintsModal({ isOpen, onClose }: ComplaintsModalProp
         },
         body: JSON.stringify({
           ...formData,
-          recaptchaToken
+          recaptchaToken: token
         }),
       })
       
@@ -109,8 +108,7 @@ export default function ComplaintsModal({ isOpen, onClose }: ComplaintsModalProp
           description: ''
         })
         
-        // Resetear token
-        setRecaptchaToken(null)
+        // No es necesario resetear el token ya que ahora usamos directamente el valor
         
         // Cerrar modal después de un breve delay para mostrar el mensaje de éxito
         setTimeout(() => {
