@@ -38,7 +38,7 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
 
 export async function POST(request: Request) {
   try {
-    const { name, email, phone, message, recaptchaToken } = await request.json();
+    const { name, email, phone, serviceType, message, recaptchaToken } = await request.json();
 
     // Validación básica
     if (!name || !email || !message) {
