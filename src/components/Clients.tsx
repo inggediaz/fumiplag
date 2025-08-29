@@ -8,42 +8,42 @@ export default function Clients() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center grayscale opacity-60">
           <div className="flex justify-center">
             <img 
-              src="https://www.unapec.edu.do/wp-content/uploads/2022/10/logo-unapec-azul-300x112.png" 
+              src="/apec.png" 
               alt="UNAPEC" 
               className="h-12" 
             />
           </div>
           <div className="flex justify-center">
             <img 
-              src="https://www.banreservas.com/_catalogs/masterpage/reservas/img/logo-banreservas.png" 
+              src="/banreservas.png" 
               alt="Banreservas" 
               className="h-10" 
             />
           </div>
           <div className="flex justify-center">
             <img 
-              src="https://www.caribbeancinemas.com/globalassets/caribbean_cinemas_logo_blue.png" 
+              src="/caribbean-cinemas.png" 
               alt="Caribbean Cinemas" 
               className="h-16" 
             />
           </div>
           <div className="flex justify-center">
             <img 
-              src="https://www.sb.gob.do/assets/img/logo-main.svg" 
+              src="/superintendencia-de-bancos.png" 
               alt="Superintendencia de Bancos" 
               className="h-16" 
             />
           </div>
           <div className="flex justify-center">
             <img 
-              src="https://www.alorica.com/wp-content/uploads/2021/03/Alorica-logo-purple.svg" 
+              src="/alorica.png" 
               alt="Alorica" 
               className="h-10" 
             />
           </div>
           <div className="flex justify-center">
             <img 
-              src="https://www.mescyt.gob.do/images/logo-footer.png" 
+              src="/mescyt.png" 
               alt="MESCYT" 
               className="h-16" 
             />
