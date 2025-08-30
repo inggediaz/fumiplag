@@ -67,7 +67,7 @@ export async function POST(request: Request) {
     // Enviar email
     const { data, error } = await resend.emails.send({
       from: process.env.FROM_EMAIL || 'noreply@fumiplagrd.do',
-      to: [process.env.TO_EMAIL || 'contacto@fumiplagrd.do'],
+      to: ['contacto@fumiplagrd.do'],
       subject: `🚨 QUEJA RECIBIDA - ${complaintType} - ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

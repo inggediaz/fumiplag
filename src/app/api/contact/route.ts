@@ -63,11 +63,11 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
-
+    const to = serviceType === 'Residencial' ? 'operaciones@fumiplagrd.do' : 'ana@fumiplagrd.do';
     // Enviar email
     const { data, error } = await resend.emails.send({
       from: process.env.FROM_EMAIL || 'noreply@fumiplagrd.do',
-      to: [process.env.TO_EMAIL || 'contacto@fumiplagrd.do'],
+      to: [to],
       subject: `Nueva consulta de ${name} - ${serviceType || 'General'}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
