@@ -26,7 +26,7 @@ export default function Hero() {
           FUMIPLAG PEST CONTROL
         </div>
         <p className="mt-4 text-lg font-normal md:text-xl max-w-3xl mx-auto leading-relaxed">
-          Especialistas en manejo integrado de plagas urbanas con más de 15 años de experiencia. 
+          Especialistas en manejo integrado de plagas urbanas con más de 16 años de experiencia. 
           Ofrecemos soluciones efectivas para control de termitas, desratización, desinsectación y desinfección 
           para hogares, empresas e industrias en República Dominicana.
         </p>

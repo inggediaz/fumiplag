@@ -22,7 +22,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-base text-gray-400 max-w-sm">
-              Especialistas en control profesional de plagas con más de 15 años
+              Especialistas en control profesional de plagas con más de 16 años
               de experiencia en República Dominicana.
             </p>
           </div>

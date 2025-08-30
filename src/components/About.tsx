@@ -28,7 +28,7 @@ const features = [
       </svg>
     ),
     title: 'Técnicos Expertos',
-    description: 'Personal certificado con más de 15 años de experiencia en el sector.'
+    description: 'Personal certificado con más de 16 años de experiencia en el sector.'
   },
   {
     icon: (
@@ -109,7 +109,7 @@ export default function About() {
             ¿Por Qué Elegir <span className="text-primary">FUMIPLAG</span>?
           </h3>
           <p className="text-lg text-color-secondary max-w-3xl mx-auto">
-            Con más de 15 años de experiencia, somos líderes en control de plagas en República Dominicana. 
+            Con más de 16 años de experiencia, somos líderes en control de plagas en República Dominicana. 
             Utilizamos tecnología de vanguardia y productos certificados para garantizar resultados efectivos.
           </p>
         </div>
