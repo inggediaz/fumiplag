@@ -1,7 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-
 const features = [
   {
     icon: (
@@ -48,21 +46,6 @@ const features = [
 ]
 
 export default function About() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 3;
-
-  // Auto-advance carousel
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
 
   return (
     <section className="py-20 bg-gray-50" id="about">
@@ -185,44 +168,7 @@ export default function About() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-color-primary mb-2">Productos Seguros</h3>
-            <p className="text-color-secondary mb-4">Utilizamos productos certificados y seguros para la salud y el medio ambiente.</p>
-            
-            {/* Carrusel de servicios realizados */}
-            <div className="relative overflow-hidden rounded-lg">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out" 
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
-                <div className="w-full flex-shrink-0">
-                  <div className="bg-gradient-to-br from-blue-100 to-blue-200 h-32 rounded-lg flex items-center justify-center border-2 border-blue-300">
-                    <span className="text-blue-700 text-sm font-semibold">Servicio Residencial</span>
-                  </div>
-                </div>
-                <div className="w-full flex-shrink-0">
-                  <div className="bg-gradient-to-br from-green-100 to-green-200 h-32 rounded-lg flex items-center justify-center border-2 border-green-300">
-                    <span className="text-green-700 text-sm font-semibold">Servicio Comercial</span>
-                  </div>
-                </div>
-                <div className="w-full flex-shrink-0">
-                  <div className="bg-gradient-to-br from-orange-100 to-orange-200 h-32 rounded-lg flex items-center justify-center border-2 border-orange-300">
-                    <span className="text-orange-700 text-sm font-semibold">Servicio Industrial</span>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Indicadores del carrusel */}
-              <div className="flex justify-center mt-3 space-x-2">
-                {[0, 1, 2].map((index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                      currentSlide === index ? 'bg-primary' : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
+            <p className="text-color-secondary">Utilizamos productos certificados y seguros para la salud y el medio ambiente.</p>
           </div>
 
           <div className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
