@@ -87,7 +87,7 @@ export default function Clients() {
             <img 
               src="/clientes-logo/alma-iglesias.png" 
               alt="Alma Iglesias" 
-              className="h-12" 
+              className="h-22" 
             />
           </div>
         </div>
