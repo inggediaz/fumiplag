@@ -1,3 +1,7 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
 const features = [
   {
     icon: (
@@ -44,6 +48,22 @@ const features = [
 ]
 
 export default function About() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const totalSlides = 3;
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
   return (
     <section className="py-20 bg-gray-50" id="about">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +73,8 @@ export default function About() {
             Sobre <span className="text-primary">FUMIPLAG</span>
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {/* Misión y Visión */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Misión */}
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
@@ -63,8 +84,8 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4 uppercase">Misión</h3>
               <p className="text-color-secondary leading-relaxed">
-                Brindar soluciones innovadoras de primera calidad en control y erradicación de plagas, 
-                garantizando la eficiencia y resultados de nuestros servicios.
+                Brindar soluciones profesionales, innovadoras y de primera calidad en el control de plagas, garantizando la 
+                eficiencia y los resultados de nuestros servicios para la satisfacción de nuestros clientes.
               </p>
             </div>
 
@@ -78,28 +99,60 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4 uppercase">Visión</h3>
               <p className="text-color-secondary leading-relaxed">
-                Ser la empresa número 1 en el control de plagas en República Dominicana y el Caribe 
-                en el sector empresarial, industrial y residencial.
+                Ser la empresa líder en el control integral de plagas con nuestros clientes empresarial, gubernamental, industrial y 
+                residencial a nivel nacional, destacándonos por la excelencia operativa, el cumplimiento normativo y la 
+                mejora continua de nuestros procesos.
               </p>
             </div>
+          </div>
 
-            {/* Valores */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
+          {/* Valores */}
+          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow mb-16">
+            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-primary mb-6 uppercase text-center">Valores</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">1. Responsabilidad:</h4>
+                <p className="text-gray-600 text-sm">Actuamos con integridad y seriedad cumpliendo con las normativas vigentes aplicables y los principios éticos en todos nuestros procesos.</p>
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-4 uppercase">Nuestros Valores</h3>
-              <div className="grid grid-cols-2 gap-2 text-sm text-color-secondary">
-                <div className="text-center py-2">Compromiso</div>
-                <div className="text-center py-2">Innovación</div>
-                <div className="text-center py-2">Respeto</div>
-                <div className="text-center py-2">Honestidad</div>
-                <div className="text-center py-2">Puntualidad</div>
-                <div className="text-center py-2">Trabajo en Equipo</div>
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">2. Compromiso:</h4>
+                <p className="text-gray-600 text-sm">Nos enfocamos en entregar un servicio eficiente, puntual y bien ejecutado, garantizando resultados mediante la excelencia operativa.</p>
+              </div>
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">3. Sostenibilidad:</h4>
+                <p className="text-gray-600 text-sm">Uso de métodos y productos que cuidan el entorno y reducen el impacto ambiental.</p>
+              </div>
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">4. Innovación:</h4>
+                <p className="text-gray-600 text-sm">Utilizamos tecnologías y métodos modernos para ofrecer soluciones más efectivas y menos invasivas.</p>
+              </div>
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">5. Orientación al cliente:</h4>
+                <p className="text-gray-600 text-sm">Trabajamos con enfoque en la satisfacción del cliente, brindando atención personalizada que generen confianza y fidelidad.</p>
+              </div>
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">6. Trabajo en equipo:</h4>
+                <p className="text-gray-600 text-sm">Fomentamos la colaboración y proactividad, el respeto mutuo y la comunicación efectiva entre todos los miembros de la organización.</p>
               </div>
             </div>
+          </div>
+          
+          {/* Política de Calidad */}
+          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow max-w-4xl mx-auto">
+            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-primary mb-4 uppercase text-center">Política de Calidad</h3>
+            <p className="text-color-secondary leading-relaxed text-center">
+              En Fumiplag nos comprometemos a brindar servicios de control de plagas con altos estándares de calidad, utilizando métodos innovadores y seguros que minimicen el impacto medioambiental, cumpliendo con las normativas legales aplicables que garanticen la salud de las personas y promuevan la sostenibilidad, respaldado por un equipo profesional altamente capacitado que mantiene un compromiso con la mejora continua de los procesos.
+            </p>
           </div>
         </div>
 
@@ -132,7 +185,44 @@ export default function About() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-color-primary mb-2">Productos Seguros</h3>
-            <p className="text-color-secondary">Utilizamos productos certificados y seguros para su familia y mascotas.</p>
+            <p className="text-color-secondary mb-4">Utilizamos productos certificados y seguros para la salud y el medio ambiente.</p>
+            
+            {/* Carrusel de servicios realizados */}
+            <div className="relative overflow-hidden rounded-lg">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out" 
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                <div className="w-full flex-shrink-0">
+                  <div className="bg-gradient-to-br from-blue-100 to-blue-200 h-32 rounded-lg flex items-center justify-center border-2 border-blue-300">
+                    <span className="text-blue-700 text-sm font-semibold">Servicio Residencial</span>
+                  </div>
+                </div>
+                <div className="w-full flex-shrink-0">
+                  <div className="bg-gradient-to-br from-green-100 to-green-200 h-32 rounded-lg flex items-center justify-center border-2 border-green-300">
+                    <span className="text-green-700 text-sm font-semibold">Servicio Comercial</span>
+                  </div>
+                </div>
+                <div className="w-full flex-shrink-0">
+                  <div className="bg-gradient-to-br from-orange-100 to-orange-200 h-32 rounded-lg flex items-center justify-center border-2 border-orange-300">
+                    <span className="text-orange-700 text-sm font-semibold">Servicio Industrial</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Indicadores del carrusel */}
+              <div className="flex justify-center mt-3 space-x-2">
+                {[0, 1, 2].map((index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                      currentSlide === index ? 'bg-primary' : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
@@ -141,7 +231,7 @@ export default function About() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-color-primary mb-2">Técnicos Expertos</h3>
+            <h3 className="text-xl font-bold text-color-primary mb-2">Profesionales Expertos</h3>
             <p className="text-color-secondary">Personal altamente capacitado y certificado en control de plagas.</p>
           </div>
 

@@ -16,9 +16,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="FUMIPLAG Pest Control"
-                width={200}
-                height={50}
-                className="h-10 w-auto"
+                width={280}
+                height={70}
+                className="h-16 w-auto brightness-110 contrast-110"
               />
             </div>
             <p className="text-base text-gray-400 max-w-sm">

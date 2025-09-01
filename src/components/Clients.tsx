@@ -3,20 +3,20 @@ export default function Clients() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold leading-tight tracking-tighter text-center text-color-primary mb-12 uppercase">
-          Nuestros Clientes
+          Algunos de nuestros clientes
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center grayscale opacity-60">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center grayscale opacity-60">
           <div className="flex justify-center">
             <img 
-              src="/clientes-logo/logo-constructora-ldv.png" 
-              alt="Constructora LDV" 
+              src="/clientes-logo/rodos.png" 
+              alt="Rodos" 
               className="h-12" 
             />
           </div>
           <div className="flex justify-center">
             <img 
-              src="/clientes-logo/rodos.png" 
-              alt="Rodos" 
+              src="/clientes-logo/logo-constructora-ldv.png" 
+              alt="Constructora LDV" 
               className="h-12" 
             />
           </div>
@@ -29,22 +29,8 @@ export default function Clients() {
           </div>
           <div className="flex justify-center">
             <img 
-              src="/clientes-logo/mercadom.png" 
-              alt="Mercadom" 
-              className="h-12" 
-            />
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/clientes-logo/superintendencia-de-bancos.png" 
-              alt="Superintendencia de Bancos" 
-              className="h-16" 
-            />
-          </div>
-          <div className="flex justify-center">
-            <img 
               src="/clientes-logo/apec.png" 
-              alt="UNAPEC" 
+              alt="UNPEC" 
               className="h-12" 
             />
           </div>
@@ -52,6 +38,13 @@ export default function Clients() {
             <img 
               src="/clientes-logo/dominicana-de-seguros.png" 
               alt="Dominicana de Seguros" 
+              className="h-12" 
+            />
+          </div>
+          <div className="flex justify-center">
+            <img 
+              src="/clientes-logo/erc.png" 
+              alt="ERC" 
               className="h-12" 
             />
           </div>
@@ -71,36 +64,8 @@ export default function Clients() {
           </div>
           <div className="flex justify-center">
             <img 
-              src="/clientes-logo/mescyt.png"
-              alt="MESCYT" 
-              className="h-16" 
-            />
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/clientes-logo/fonper.png" 
-              alt="FONPER" 
-              className="h-12" 
-            />
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/clientes-logo/edom.png" 
-              alt="EDOM" 
-              className="h-10" 
-            />
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/clientes-logo/alma-iglesias.png" 
-              alt="Alma Iglesias" 
-              className="h-12" 
-            />
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/clientes-logo/clinica-dr-bonilla.png" 
-              alt="Clínica Dr. Bonilla" 
+              src="/clientes-logo/bandex.png" 
+              alt="Bandex" 
               className="h-12" 
             />
           </div>
@@ -113,50 +78,15 @@ export default function Clients() {
           </div>
           <div className="flex justify-center">
             <img 
-              src="/clientes-logo/bandex.png" 
-              alt="Bandex" 
+              src="/clientes-logo/moviti.png" 
+              alt="Moviti (Volvo, Fiat)" 
               className="h-12" 
             />
           </div>
           <div className="flex justify-center">
             <img 
-              src="/clientes-logo/hospital.png" 
-              alt="Hospital Traumatológico Dr. Neftalí Lora" 
-              className="h-12" 
-            />
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/clientes-logo/presidencia-de-la-republica-ministerios-administrativo.png" 
-              alt="Presidencia de la República - Ministerio Administrativo" 
-              className="h-16" 
-            />
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/clientes-logo/hemocentro-nacional.png" 
-              alt="Hemocentro Nacional" 
-              className="h-12" 
-            />
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/clientes-logo/gobierno-de-la-república-dominicana-presupuesto.png" 
-              alt="Gobierno de la República Dominicana - Presupuesto" 
-              className="h-16" 
-            />
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/clientes-logo/kids-fitness.png" 
-              alt="Kids Fitness" 
-              className="h-10" 
-            />
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/clientes-logo/dominicana-de-seguros.png" 
-              alt="Dominicana de Seguros" 
+              src="/clientes-logo/alma-iglesias.png" 
+              alt="Alma Iglesias" 
               className="h-12" 
             />
           </div>

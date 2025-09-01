@@ -39,9 +39,9 @@ export default function Header() {
           <Image
             src="/logo.png"
             alt="FUMIPLAG Pest Control"
-            width={200}
-            height={50}
-            className="h-10 w-auto"
+            width={250}
+            height={65}
+            className="h-14 w-auto"
           />
         </div>
         

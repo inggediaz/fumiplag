@@ -9,13 +9,13 @@ export default function Services() {
           <div className="group flex flex-col overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2">
             <div className="relative h-56 w-full">
               <img 
-                src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                alt="Servicios Corporativos y Empresariales" 
+                src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="Servicios Comerciales - Edificio Corporativo" 
                 className="absolute h-full w-full object-cover" 
               />
             </div>
             <div className="p-6 flex-grow">
-              <h3 className="text-xl font-bold text-color-primary mb-2">Corporativo</h3>
+              <h3 className="text-xl font-bold text-color-primary mb-2">Comercial</h3>
               <p className="text-base text-color-secondary">
                 Protegemos la reputación y operatividad de su empresa, restaurante o centro de salud.
               </p>
@@ -25,8 +25,8 @@ export default function Services() {
           <div className="group flex flex-col overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2">
             <div className="relative h-56 w-full">
               <img 
-                src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                alt="Servicios Residenciales" 
+                src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="Servicios Residenciales - Sala Familiar" 
                 className="absolute h-full w-full object-cover" 
               />
             </div>
@@ -41,15 +41,15 @@ export default function Services() {
           <div className="group flex flex-col overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2">
             <div className="relative h-56 w-full">
               <img 
-                src="https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                alt="Servicios Industriales" 
+                src="https://images.pexels.com/photos/236705/pexels-photo-236705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="Servicios Industriales - Nave Industrial" 
                 className="absolute h-full w-full object-cover" 
               />
             </div>
             <div className="p-6 flex-grow">
               <h3 className="text-xl font-bold text-color-primary mb-2">Industrial</h3>
               <p className="text-base text-color-secondary">
-                Soluciones a gran escala para zonas francas, sector hotelero y alimenticio.
+                Soluciones integrales de alta calidad para zonas francas, sector hotelero y alimenticio apoyados en una gestión por procesos con estándares internacionales.
               </p>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function Services() {
             <li>Control de Roedores</li>
             <li>Tratamientos Especializados en Almacenes de Alimento</li>
             <li>Tratamientos Preventivos y Correctivos contra Termitas</li>
-            <li>Control de Palomas</li>
+            <li>Control de Aves</li>
             <li>Desinfección Ambiental</li>
             <li>Programas especializados para Hospitales y Hotelería</li>
             <li>Control de Vectores en el Sector Salud</li>

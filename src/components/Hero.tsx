@@ -22,13 +22,8 @@ export default function Hero() {
         <h1 className="text-4xl font-black leading-tight tracking-tighter md:text-6xl uppercase mb-6">
           Control Profesional de Plagas
         </h1>
-        <div className="text-xl md:text-2xl font-bold text-primary mb-4 uppercase tracking-wide">
-          FUMIPLAG PEST CONTROL
-        </div>
         <p className="mt-4 text-lg font-normal md:text-xl max-w-3xl mx-auto leading-relaxed">
-          Especialistas en manejo integrado de plagas urbanas con más de 16 años de experiencia. 
-          Ofrecemos soluciones efectivas para control de termitas, desratización, desinsectación y desinfección 
-          para hogares, empresas e industrias en República Dominicana.
+          Especialistas en manejo integrado de plagas urbanas con más de 16 años de experiencia. Ofrecemos soluciones efectivas para el control de insectos rastreros y voladores, roedores, termitas, desinfección contra virus y bacterias en empresas, industrias y residencias, cubriendo toda la geografía de la República Dominicana.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
           <Link
