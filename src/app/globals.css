@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --primary-color: #ffbd00; /* Amarillo Fumiplag */
@@ -11,6 +12,10 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* Ajuste para header fijo */
+}
+
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
 .bg-primary {

@@ -16,7 +16,7 @@ export default {
         'dark-bg': '#1a1a1a',
       },
       fontFamily: {
-        sans: ['Lexend', 'Noto Sans', 'sans-serif'],
+        sans: ['Montserrat', 'sans-serif'],
       },
     },
   },
