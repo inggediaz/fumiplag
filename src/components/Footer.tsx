@@ -117,7 +117,29 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+        {/* Sección ANMPU */}
+        <div className="border-t border-gray-700 mt-12 pt-8 pb-8">
+          <div className="text-center">
+            <h4 className="text-lg font-semibold text-primary mb-4">
+              Miembro Certificado
+            </h4>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/ANMPU.jpg"
+                alt="Asociación Nacional de Manejo de Plagas Urbanas - ANMPU"
+                width={200}
+                height={100}
+                className="h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+              />
+              <p className="text-sm text-gray-400 max-w-md">
+                FUMIPLAG es miembro certificado de la Asociación Nacional de Manejo de Plagas Urbanas (ANMPU),
+                garantizando los más altos estándares profesionales en control de plagas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
           <p className="text-base">
             © 2025 FUMIPLAG. Todos los derechos reservados.
           </p>

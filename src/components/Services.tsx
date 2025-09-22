@@ -1,5 +1,7 @@
 'use client';
 
+import React from 'react';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
@@ -11,39 +13,75 @@ import 'swiper/css/pagination';
 const servicePhotos = [
   {
     id: 1,
-    title: 'Fumigación Residencial',
-    image: 'https://images.pexels.com/photos/4107120/pexels-photo-4107120.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Servicio profesional en hogares'
-  },
-  {
-    id: 2,
-    title: 'Control de Plagas Comercial',
-    image: 'https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Protección para empresas y oficinas'
-  },
-  {
-    id: 3,
-    title: 'Fumigación Industrial',
-    image: 'https://images.pexels.com/photos/236705/pexels-photo-236705.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Soluciones para instalaciones industriales'
-  },
-  {
-    id: 4,
+    image: '/servicios-realizados/IMG_4172.jpg',
     title: 'Desinfección Especializada',
-    image: 'https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Tratamientos de desinfección avanzados'
   },
   {
-    id: 5,
+    id: 2,
+    image: '/servicios-realizados/IMG_4185.jpg',
     title: 'Control de Roedores',
-    image: 'https://images.pexels.com/photos/4107303/pexels-photo-4107303.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Eliminación efectiva de roedores'
   },
   {
-    id: 6,
+    id: 3,
+    image: '/servicios-realizados/IMG_4208.jpg',
     title: 'Tratamiento contra Termitas',
-    image: 'https://images.pexels.com/photos/5691728/pexels-photo-5691728.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Protección estructural especializada'
+  },
+  {
+    id: 4,
+    image: '/servicios-realizados/IMG_4232.jpg',
+    title: 'Fumigación Residencial',
+    description: 'Servicio profesional en hogares'
+  },
+  {
+    id: 5,
+    image: '/servicios-realizados/IMG_4267.jpg',
+    title: 'Control de Plagas Comercial',
+    description: 'Soluciones para empresas'
+  },
+  {
+    id: 6,
+    image: '/servicios-realizados/IMG_4253.jpg',
+    title: 'Desinfección Industrial',
+    description: 'Tratamientos para industrias'
+  },
+  {
+    id: 7,
+    image: '/servicios-realizados/IMG_4378.jpg',
+    title: 'Control de Vectores',
+    description: 'Eliminación de insectos vectores'
+  },
+  {
+    id: 8,
+    image: '/servicios-realizados/IMG_4391.jpg',
+    title: 'Fumigación Preventiva',
+    description: 'Tratamientos preventivos especializados'
+  },
+  {
+    id: 9,
+    image: '/servicios-realizados/IMG_4392.jpg',
+    title: 'Control de Aves',
+    description: 'Manejo especializado de aves'
+  },
+  {
+    id: 10,
+    image: '/servicios-realizados/IMG_4412.jpg',
+    title: 'Desinfección Hospitalaria',
+    description: 'Protocolos para sector salud'
+  },
+  {
+    id: 11,
+    image: '/servicios-realizados/IMG_4558.jpg',
+    title: 'Control Integral',
+    description: 'Soluciones completas de control'
+  },
+  {
+    id: 12,
+    image: '/servicios-realizados/IMG_4592.jpg',
+    title: 'Fumigación Especializada',
+    description: 'Tratamientos técnicos avanzados'
   }
 ];
 
@@ -160,22 +198,23 @@ export default function Services() {
             >
               {servicePhotos.map((photo) => (
                 <SwiperSlide key={photo.id}>
-                  <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    <div className="relative h-48 overflow-hidden">
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-80 flex flex-col">
+                    <div className="relative h-48 overflow-hidden flex-shrink-0">
                       <img 
                         src={photo.image} 
                         alt={photo.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
-                      <div className="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
-                    <div className="p-4">
-                      <h4 className="text-lg font-semibold text-color-primary mb-2">
-                        {photo.title}
-                      </h4>
-                      <p className="text-sm text-color-secondary">
-                        {photo.description}
-                      </p>
+                    <div className="p-4 flex-grow flex flex-col justify-between">
+                      <div>
+                        <h4 className="text-lg font-semibold text-color-primary mb-2 line-clamp-2">
+                          {photo.title}
+                        </h4>
+                        <p className="text-sm text-color-secondary line-clamp-3">
+                          {photo.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </SwiperSlide>
