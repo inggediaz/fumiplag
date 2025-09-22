@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -86,13 +87,28 @@ const servicePhotos = [
 ];
 
 export default function Services() {
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ threshold: 0.3 });
+  const { elementRef: servicesRef, isVisible: servicesVisible } = useScrollAnimation({ threshold: 0.2 });
+  const { elementRef: catalogRef, isVisible: catalogVisible } = useScrollAnimation({ threshold: 0.2 });
+  const { elementRef: carouselRef, isVisible: carouselVisible } = useScrollAnimation({ threshold: 0.2 });
+
   return (
     <section className="py-20 bg-white" id="services">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold leading-tight tracking-tighter text-center text-color-primary mb-12 uppercase">
+        <h2 
+          ref={titleRef}
+          className={`text-3xl font-bold leading-tight tracking-tighter text-center text-color-primary mb-12 uppercase animate-fade-in ${
+            titleVisible ? 'visible' : ''
+          }`}
+        >
           Nuestros Servicios
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div 
+          ref={servicesRef}
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in animate-delay-200 ${
+            servicesVisible ? 'visible' : ''
+          }`}
+        >
           <div className="group flex flex-col overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2">
             <div className="relative h-56 w-full">
               <img 
@@ -144,7 +160,12 @@ export default function Services() {
         
 
         
-        <div className="mt-12 bg-secondary p-8 rounded-lg">
+        <div 
+          ref={catalogRef}
+          className={`mt-12 bg-secondary p-8 rounded-lg animate-slide-up animate-delay-400 ${
+            catalogVisible ? 'visible' : ''
+          }`}
+        >
           <h3 className="text-2xl font-bold text-center text-color-primary mb-6 uppercase">
             Catálogo de Servicios
           </h3>
@@ -161,7 +182,12 @@ export default function Services() {
         </div>
 
                 {/* Carrusel de Fotos de Servicios Realizados */}
-        <div className="mt-16 mb-12">
+        <div 
+          ref={carouselRef}
+          className={`mt-16 mb-12 animate-fade-in animate-delay-600 ${
+            carouselVisible ? 'visible' : ''
+          }`}
+        >
           <h3 className="text-2xl font-bold text-center text-color-primary mb-8 uppercase">
             Servicios Realizados
           </h3>

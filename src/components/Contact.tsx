@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, ChangeEvent, FormEvent, useEffect } from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface FormData {
   name: string;
@@ -116,20 +117,35 @@ export default function Contact() {
     }
   };
 
+  const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({ threshold: 0.2 })
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ threshold: 0.3 })
+  const { elementRef: formRef, isVisible: formVisible } = useScrollAnimation({ threshold: 0.2 })
+
   return (
-    <section className="py-20 bg-white" id="contact">
+    <section 
+      ref={sectionRef}
+      className={`py-20 bg-white animate-fade-in ${sectionVisible ? 'visible' : ''}`} 
+      id="contact"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold leading-tight tracking-tighter text-center text-color-primary mb-12 uppercase">
+          <h2 
+            ref={titleRef}
+            className={`text-3xl font-bold leading-tight tracking-tighter text-center text-color-primary mb-12 uppercase animate-slide-up animate-delay-100 ${titleVisible ? 'visible' : ''}`}
+          >
             Contáctenos
           </h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
+          <form 
+            ref={formRef}
+            onSubmit={handleSubmit} 
+            className={`space-y-6 animate-fade-in animate-delay-200 ${formVisible ? 'visible' : ''}`}
+          >
+            <div className={`animate-slide-up animate-delay-300 ${formVisible ? 'visible' : ''}`}>
               <label className="block text-base font-medium text-color-primary pb-2" htmlFor="name">
                 Nombre
               </label>
               <input
-                className="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-14 p-4 bg-secondary"
+                className="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-14 p-4 bg-secondary transition-all duration-300 hover:shadow-md focus:shadow-lg"
                 id="name"
                 name="name"
                 placeholder="Su Nombre"
@@ -139,12 +155,12 @@ export default function Contact() {
                 required
               />
             </div>
-            <div>
+            <div className={`animate-slide-up animate-delay-400 ${formVisible ? 'visible' : ''}`}>
               <label className="block text-base font-medium text-color-primary pb-2" htmlFor="email">
                 Correo Electrónico
               </label>
               <input
-                className="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-14 p-4 bg-secondary"
+                className="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-14 p-4 bg-secondary transition-all duration-300 hover:shadow-md focus:shadow-lg"
                 id="email"
                 name="email"
                 placeholder="Su Correo Electrónico"
@@ -154,12 +170,12 @@ export default function Contact() {
                 required
               />
             </div>
-            <div>
+            <div className={`animate-slide-up animate-delay-500 ${formVisible ? 'visible' : ''}`}>
               <label className="block text-base font-medium text-color-primary pb-2" htmlFor="phone">
                 Teléfono
               </label>
               <input
-                className="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-14 p-4 bg-secondary"
+                className="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-14 p-4 bg-secondary transition-all duration-300 hover:shadow-md focus:shadow-lg"
                 id="phone"
                 name="phone"
                 placeholder="Su Teléfono"
@@ -169,12 +185,12 @@ export default function Contact() {
                 required
               />
             </div>
-            <div>
+            <div className={`animate-slide-up animate-delay-600 ${formVisible ? 'visible' : ''}`}>
               <label className="block text-base font-medium text-color-primary pb-2" htmlFor="serviceType">
                 Tipo de Servicio
               </label>
               <select
-                className="form-select block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-14 p-4 bg-secondary"
+                className="form-select block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-14 p-4 bg-secondary transition-all duration-300 hover:shadow-md focus:shadow-lg"
                 id="serviceType"
                 name="serviceType"
                 value={formData.serviceType}
@@ -186,12 +202,12 @@ export default function Contact() {
                 <option value="Empresarial">Empresarial</option>
               </select>
             </div>
-            <div>
+            <div className={`animate-slide-up animate-delay-700 ${formVisible ? 'visible' : ''}`}>
               <label className="block text-base font-medium text-color-primary pb-2" htmlFor="message">
                 Mensaje
               </label>
               <textarea
-                className="form-textarea block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary p-4 bg-secondary"
+                className="form-textarea block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary p-4 bg-secondary transition-all duration-300 hover:shadow-md focus:shadow-lg"
                 id="message"
                 name="message"
                 placeholder="Su Mensaje"
@@ -208,18 +224,18 @@ export default function Contact() {
             </div>
             
             {submitStatus === 'success' && (
-              <div className="text-center p-4 bg-green-100 text-green-700 rounded-md">
+              <div className="text-center p-4 bg-green-100 text-green-700 rounded-md animate-scale">
                 ¡Gracias por contactarnos! Te responderemos pronto.
               </div>
             )}
             {submitStatus === 'error' && (
-              <div className="text-center p-4 bg-red-100 text-red-700 rounded-md">
+              <div className="text-center p-4 bg-red-100 text-red-700 rounded-md animate-scale">
                 Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.
               </div>
             )}
-            <div className="text-center">
+            <div className={`text-center animate-scale animate-delay-800 ${formVisible ? 'visible' : ''}`}>
               <button
-                className="flex min-w-[150px] mx-auto max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-primary text-black text-base font-bold leading-normal tracking-wide shadow-lg hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex min-w-[150px] mx-auto max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-primary text-black text-base font-bold leading-normal tracking-wide shadow-lg hover:opacity-90 hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 type="submit"
                 disabled={isSubmitting}
               >
