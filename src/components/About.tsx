@@ -192,6 +192,26 @@ export default function About() {
             <p className="text-color-secondary">Servicio disponible en todo el territorio dominicano.</p>
           </div>
         </div>
+
+        {/* Sección de Estadísticas */}
+        <div className="bg-primary py-16 rounded-lg mt-16">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="text-black">
+                <div className="text-5xl md:text-6xl font-bold mb-2">98%</div>
+                <div className="text-lg font-medium">Satisfacción</div>
+              </div>
+              <div className="text-black">
+                <div className="text-5xl md:text-6xl font-bold mb-2">+2,500</div>
+                <div className="text-lg font-medium">Clientes a nivel nacional</div>
+              </div>
+              <div className="text-black">
+                <div className="text-5xl md:text-6xl font-bold mb-2">+3,000</div>
+                <div className="text-lg font-medium">Horas de entrenamiento</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

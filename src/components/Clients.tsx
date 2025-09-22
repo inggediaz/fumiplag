@@ -5,7 +5,7 @@ export default function Clients() {
         <h2 className="text-3xl font-bold leading-tight tracking-tighter text-center text-color-primary mb-12 uppercase">
           Algunos de nuestros clientes
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center grayscale opacity-60">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center">
           <div className="flex justify-center">
             <img 
               src="/clientes-logo/rodos.png" 

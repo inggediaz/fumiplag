@@ -6,7 +6,7 @@
   --secondary-color: #f8f9fa; /* Un gris muy claro para fondos sutiles */
   --text-primary: #1a1a1a; /* Negro intenso para textos */
   --text-secondary: #6c757d; /* Gris para textos secundarios */
-  --dark-bg: #1a1a1a; /* Fondo negro */
+  --dark-bg: #333; /* Fondo negro */
 }
 
 html {
