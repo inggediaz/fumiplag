@@ -118,8 +118,8 @@ export default function Contact() {
   };
 
   const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({ threshold: 0.2 })
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ threshold: 0.3 })
-  const { elementRef: formRef, isVisible: formVisible } = useScrollAnimation({ threshold: 0.2 })
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ threshold: 0.3 })
+  const { elementRef: formRef, isVisible: formVisible } = useScrollAnimation<HTMLFormElement>({ threshold: 0.2 })
 
   return (
     <section 

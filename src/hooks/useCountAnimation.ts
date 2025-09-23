@@ -9,12 +9,12 @@ interface CountAnimationOptions {
   rootMargin?: string;
 }
 
-export function useCountAnimation(
+export function useCountAnimation<T extends HTMLElement = HTMLElement>(
   targetValue: number,
   options: CountAnimationOptions = {}
 ) {
   const { duration = 2000, threshold = 0.3, rootMargin = '0px' } = options;
-  const { elementRef, isVisible } = useScrollAnimation({ threshold, rootMargin });
+  const { elementRef, isVisible } = useScrollAnimation<T>({ threshold, rootMargin });
   const [currentValue, setCurrentValue] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -48,19 +48,19 @@ export function useCountAnimation(
   return [elementRef, currentValue, isVisible] as const;
 }
 
-export function usePercentageAnimation(
+export function usePercentageAnimation<T extends HTMLElement = HTMLElement>(
   targetValue: number,
   options: CountAnimationOptions = {}
 ) {
-  const [elementRef, currentValue, isVisible] = useCountAnimation(targetValue, options);
+  const [elementRef, currentValue, isVisible] = useCountAnimation<T>(targetValue, options);
   return [elementRef, `${currentValue}%`, isVisible] as const;
 }
 
-export function usePlusCountAnimation(
+export function usePlusCountAnimation<T extends HTMLElement = HTMLElement>(
   targetValue: number,
   options: CountAnimationOptions = {}
 ) {
-  const [elementRef, currentValue, isVisible] = useCountAnimation(targetValue, options);
+  const [elementRef, currentValue, isVisible] = useCountAnimation<T>(targetValue, options);
   const formattedValue = currentValue >= 1000 
     ? `+${(currentValue / 1000).toFixed(1)}k`.replace('.0k', 'k')
     : `+${currentValue}`;

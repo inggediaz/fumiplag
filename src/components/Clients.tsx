@@ -3,8 +3,8 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export default function Clients() {
   const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({ threshold: 0.2 })
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ threshold: 0.3 })
-  const { elementRef: logosRef, isVisible: logosVisible } = useScrollAnimation({ threshold: 0.2 })
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ threshold: 0.3 })
+  const { elementRef: logosRef, isVisible: logosVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 })
 
   return (
     <section 

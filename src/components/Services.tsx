@@ -87,10 +87,10 @@ const servicePhotos = [
 ];
 
 export default function Services() {
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ threshold: 0.3 });
-  const { elementRef: servicesRef, isVisible: servicesVisible } = useScrollAnimation({ threshold: 0.2 });
-  const { elementRef: catalogRef, isVisible: catalogVisible } = useScrollAnimation({ threshold: 0.2 });
-  const { elementRef: carouselRef, isVisible: carouselVisible } = useScrollAnimation({ threshold: 0.2 });
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ threshold: 0.3 });
+  const { elementRef: servicesRef, isVisible: servicesVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
+  const { elementRef: catalogRef, isVisible: catalogVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
+  const { elementRef: carouselRef, isVisible: carouselVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
 
   return (
     <section className="py-20 bg-white" id="services">

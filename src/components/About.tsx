@@ -1,4 +1,5 @@
 'use client';
+
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { usePercentageAnimation, usePlusCountAnimation } from '@/hooks/useCountAnimation';
 
@@ -48,27 +49,32 @@ const features = [
 ]
 
 export default function About() {
-  const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation()
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ threshold: 0.3 })
-  const { elementRef: missionVisionRef, isVisible: missionVisionVisible } = useScrollAnimation({ threshold: 0.2 })
-  const { elementRef: valuesRef, isVisible: valuesVisible } = useScrollAnimation({ threshold: 0.2 })
-  const { elementRef: policyRef, isVisible: policyVisible } = useScrollAnimation({ threshold: 0.3 })
-  const { elementRef: whyChooseRef, isVisible: whyChooseVisible } = useScrollAnimation({ threshold: 0.3 })
-  const { elementRef: featuresRef, isVisible: featuresVisible } = useScrollAnimation({ threshold: 0.2 })
+  // Hooks de animación para secciones
+  const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({ threshold: 0.2 });
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ threshold: 0.3 });
+  const { elementRef: missionVisionRef, isVisible: missionVisionVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
+  const { elementRef: valuesRef, isVisible: valuesVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
+  const { elementRef: policyRef, isVisible: policyVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
+  const { elementRef: whyChooseRef, isVisible: whyChooseVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
+  const { elementRef: featuresRef, isVisible: featuresVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
   
-  // Animaciones de conteo para estadísticas
-  const [satisfactionRef, satisfactionValue, satisfactionVisible] = usePercentageAnimation(98, { duration: 2500 })
-  const [clientsRef, clientsValue, clientsVisible] = usePlusCountAnimation(2500, { duration: 2500 })
-  const [hoursRef, hoursValue, hoursVisible] = usePlusCountAnimation(3000, { duration: 2500 })
+  // Hooks de animación para estadísticas
+  const [satisfactionRef, satisfactionValue, satisfactionVisible] = usePercentageAnimation<HTMLDivElement>(98, { threshold: 0.3 });
+  const [clientsRef, clientsValue, clientsVisible] = usePlusCountAnimation<HTMLDivElement>(2500, { threshold: 0.3 });
+  const [hoursRef, hoursValue, hoursVisible] = usePlusCountAnimation<HTMLDivElement>(3000, { threshold: 0.3 });
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gray-50" id="about">
+    <section 
+      ref={sectionRef}
+      className={`py-20 bg-gray-50 animate-fade-in ${sectionVisible ? 'visible' : ''}`} 
+      id="about"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Misión, Visión y Valores */}
         <div className="text-center mb-16">
           <h2 
             ref={titleRef}
-            className={`text-3xl font-bold leading-tight tracking-tighter text-color-primary mb-12 uppercase animate-fade-in ${titleVisible ? 'visible' : ''}`}
+            className={`text-3xl font-bold leading-tight tracking-tighter text-color-primary mb-12 uppercase animate-slide-up animate-delay-100 ${titleVisible ? 'visible' : ''}`}
           >
             Sobre <span className="text-primary">FUMIPLAG</span>
           </h2>
@@ -76,10 +82,10 @@ export default function About() {
           {/* Misión y Visión */}
           <div 
             ref={missionVisionRef}
-            className={`grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 animate-slide-up animate-delay-200 ${missionVisionVisible ? 'visible' : ''}`}
+            className={`grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 animate-fade-in animate-delay-200 ${missionVisionVisible ? 'visible' : ''}`}
           >
             {/* Misión */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div className={`bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow animate-slide-up animate-delay-300 ${missionVisionVisible ? 'visible' : ''}`}>
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -93,7 +99,7 @@ export default function About() {
             </div>
 
             {/* Visión */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div className={`bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow animate-slide-up animate-delay-400 ${missionVisionVisible ? 'visible' : ''}`}>
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -112,7 +118,7 @@ export default function About() {
           {/* Valores */}
           <div 
             ref={valuesRef}
-            className={`bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow mb-16 animate-scale animate-delay-300 ${valuesVisible ? 'visible' : ''}`}
+            className={`bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow mb-16 animate-fade-in animate-delay-500 ${valuesVisible ? 'visible' : ''}`}
           >
             <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
               <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -151,7 +157,7 @@ export default function About() {
           {/* Política de Calidad */}
           <div 
             ref={policyRef}
-            className={`bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow max-w-4xl mx-auto animate-fade-in animate-delay-400 ${policyVisible ? 'visible' : ''}`}
+            className={`bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow max-w-4xl mx-auto animate-fade-in animate-delay-600 ${policyVisible ? 'visible' : ''}`}
           >
             <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
               <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -168,7 +174,7 @@ export default function About() {
         {/* ¿Por Qué Elegir FUMIPLAG? */}
         <div 
           ref={whyChooseRef}
-          className={`text-center mb-16 animate-fade-in ${whyChooseVisible ? 'visible' : ''}`}
+          className={`text-center mb-16 animate-fade-in animate-delay-700 ${whyChooseVisible ? 'visible' : ''}`}
         >
           <h3 className="text-2xl font-bold leading-tight tracking-tighter text-color-primary mb-4 uppercase">
             ¿Por Qué Elegir <span className="text-primary">FUMIPLAG</span>?
@@ -181,9 +187,9 @@ export default function About() {
 
         <div 
           ref={featuresRef}
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-slide-up animate-delay-200 ${featuresVisible ? 'visible' : ''}`}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-in animate-delay-800 ${featuresVisible ? 'visible' : ''}`}
         >
-          <div className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div className={`text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow animate-scale animate-delay-900 ${featuresVisible ? 'visible' : ''}`}>
             <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -193,7 +199,7 @@ export default function About() {
             <p className="text-color-secondary">Respaldamos nuestro trabajo con garantía completa de satisfacción.</p>
           </div>
 
-          <div className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div className={`text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow animate-scale animate-delay-1000 ${featuresVisible ? 'visible' : ''}`}>
             <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -203,7 +209,7 @@ export default function About() {
             <p className="text-color-secondary">Utilizamos productos certificados y seguros para la salud y el medio ambiente.</p>
           </div>
 
-          <div className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div className={`text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow animate-scale animate-delay-1100 ${featuresVisible ? 'visible' : ''}`}>
             <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -213,7 +219,7 @@ export default function About() {
             <p className="text-color-secondary">Personal altamente capacitado y certificado en control de plagas.</p>
           </div>
 
-          <div className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div className={`text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow animate-scale animate-delay-1200 ${featuresVisible ? 'visible' : ''}`}>
             <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -229,31 +235,31 @@ export default function About() {
         <div className="bg-primary py-16 rounded-lg mt-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div 
-                ref={satisfactionRef}
-                className={`text-black transition-all duration-1000 animate-scale animate-delay-100 ${
-                  satisfactionVisible ? 'visible' : ''
-                }`}
-              >
-                <div className={`text-5xl md:text-6xl font-bold mb-2 animate-counter ${satisfactionVisible ? 'visible' : ''}`}>{satisfactionValue}</div>
+              <div className="text-black">
+                <div 
+                  ref={satisfactionRef}
+                  className={`text-5xl md:text-6xl font-bold mb-2 animate-counter animate-delay-900 ${satisfactionVisible ? 'visible' : ''}`}
+                >
+                  {satisfactionValue}
+                </div>
                 <div className="text-lg font-medium">Satisfacción</div>
               </div>
-              <div 
-                ref={clientsRef}
-                className={`text-black transition-all duration-1000 animate-scale animate-delay-200 ${
-                  clientsVisible ? 'visible' : ''
-                }`}
-              >
-                <div className={`text-5xl md:text-6xl font-bold mb-2 animate-counter ${clientsVisible ? 'visible' : ''}`}>{clientsValue}</div>
+              <div className="text-black">
+                <div 
+                  ref={clientsRef}
+                  className={`text-5xl md:text-6xl font-bold mb-2 animate-counter animate-delay-1000 ${clientsVisible ? 'visible' : ''}`}
+                >
+                  {clientsValue}
+                </div>
                 <div className="text-lg font-medium">Clientes a nivel nacional</div>
               </div>
-              <div 
-                ref={hoursRef}
-                className={`text-black transition-all duration-1000 animate-scale animate-delay-300 ${
-                  hoursVisible ? 'visible' : ''
-                }`}
-              >
-                <div className={`text-5xl md:text-6xl font-bold mb-2 animate-counter ${hoursVisible ? 'visible' : ''}`}>{hoursValue}</div>
+              <div className="text-black">
+                <div 
+                  ref={hoursRef}
+                  className={`text-5xl md:text-6xl font-bold mb-2 animate-counter animate-delay-1100 ${hoursVisible ? 'visible' : ''}`}
+                >
+                  {hoursValue}
+                </div>
                 <div className="text-lg font-medium">Horas de entrenamiento</div>
               </div>
             </div>

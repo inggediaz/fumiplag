@@ -5,9 +5,9 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function Hero() {
   const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation()
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ threshold: 0.3 })
-  const { elementRef: descRef, isVisible: descVisible } = useScrollAnimation({ threshold: 0.3 })
-  const { elementRef: buttonsRef, isVisible: buttonsVisible } = useScrollAnimation({ threshold: 0.3 })
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ threshold: 0.3 })
+  const { elementRef: descRef, isVisible: descVisible } = useScrollAnimation<HTMLParagraphElement>({ threshold: 0.3 })
+  const { elementRef: buttonsRef, isVisible: buttonsVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.3 })
 
   return (
     <section
