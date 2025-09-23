@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: 'FUMIPLAG - Expertos en Control de Plagas',
   description: 'Soluciones innovadoras para el manejo integrado de plagas urbanas. Protegemos su hogar, negocio e industria con más de 16 años de experiencia.',
   keywords: 'control de plagas, fumigación, desinfección, República Dominicana, Santo Domingo',
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: 'FUMIPLAG - Expertos en Control de Plagas',
     description: 'Soluciones innovadoras para el manejo integrado de plagas urbanas.',
