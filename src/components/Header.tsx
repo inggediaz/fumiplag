@@ -37,12 +37,13 @@ export default function Header() {
       <div className="container mx-auto flex items-center justify-between whitespace-nowrap px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center">
           <Image
-            src="/logo.png"
-            alt="FUMIPLAG Pest Control"
-            width={250}
-            height={65}
-            className="h-14 w-auto"
-          />
+          src="/logo.png"
+          alt="FUMIPLAG Pest Control"
+          width={250}
+          height={65}
+          className="h-14 w-auto"
+          priority={true}
+        />
         </div>
         
         <div className="hidden md:flex items-center gap-6">
