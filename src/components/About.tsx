@@ -168,7 +168,7 @@ export default function About() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-primary mb-4 uppercase text-center">Política de Calidad</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-primary mb-4 uppercase text-center">Política de la Calidad</h3>
             <p className="text-sm sm:text-base text-color-secondary leading-relaxed text-center">
               En Fumiplag nos comprometemos a brindar servicios de control de plagas con altos estándares de calidad, utilizando métodos innovadores y seguros que minimicen el impacto medioambiental, cumpliendo con las normativas legales aplicables que garanticen la salud de las personas y promuevan la sostenibilidad, respaldado por un equipo profesional altamente capacitado que mantiene un compromiso con la mejora continua de los procesos.
             </p>
